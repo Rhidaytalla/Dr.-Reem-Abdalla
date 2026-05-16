@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Reem Abbas Hidaytalla Abdalla — Academic Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --teal-dark:   #063d36;
+    --teal:        #0a5c4f;
+    --teal-mid:    #0f7a69;
+    --teal-light:  #e0f2ef;
+    --gold:        #b8893a;
+    --gold-light:  #f7f0e3;
+    --ivory:       #faf8f4;
+    --text-dark:   #1a1a18;
+    --text-mid:    #44443e;
+    --text-muted:  #7a7a72;
+    --border:      #e2ddd4;
+    --white:       #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ivory);
+    color: var(--text-dark);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(6,61,54,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(184,137,58,0.25);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem; font-weight: 400;
+    color: #f0ebe2; letter-spacing: 0.02em;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: rgba(240,235,226,0.75); text-decoration: none;
+    font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(150deg, var(--teal-dark) 0%, var(--teal) 60%, #0d6657 100%);
+    padding: 5rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  .hero-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: 160px 1fr; gap: 3rem; align-items: center;
+    position: relative;
+  }
+  .avatar {
+    width: 148px; height: 148px; border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    border: 3px solid rgba(184,137,58,0.6);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; font-weight: 300; color: rgba(255,255,255,0.9);
+    flex-shrink: 0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem; font-weight: 300; line-height: 1.2;
+    color: #f5f0e8; margin-bottom: 0.4rem;
+  }
+  .hero-text h1 strong { font-weight: 600; }
+  .hero-role {
+    color: var(--gold); font-size: 0.85rem; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 0.3rem; font-weight: 500;
+  }
+  .hero-inst {
+    color: rgba(240,235,226,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;
+  }
+  .hero-ids {
+    display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.4rem;
+  }
+  .id-chip {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 4px; padding: 4px 10px;
+    font-size: 0.72rem; color: rgba(240,235,226,0.8);
+    letter-spacing: 0.04em;
+  }
+  .id-chip span { color: rgba(184,137,58,0.9); font-weight: 500; }
+  .hero-contacts { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 6px;
+    color: rgba(240,235,226,0.85); text-decoration: none;
+    font-size: 0.82rem; transition: color 0.2s;
+  }
+  .contact-link:hover { color: var(--gold); }
+  .contact-link svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+  /* SECTIONS */
+  section { padding: 4rem 2rem; }
+  section:nth-child(even) { background: var(--white); }
+  .section-inner { max-width: 900px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 0.5rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; font-weight: 400; color: var(--teal-dark);
+    margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.8rem;
+  }
+
+  /* METRICS */
+  .metrics-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+    margin-bottom: 0;
+  }
+  .metric-card {
+    background: var(--teal-light);
+    border: 1px solid rgba(10,92,79,0.15);
+    border-radius: 8px; padding: 1.5rem 1.25rem; text-align: center;
+  }
+  .metric-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem; font-weight: 600; color: var(--teal);
+    line-height: 1; margin-bottom: 0.4rem;
+  }
+  .metric-label {
+    font-size: 0.78rem; color: var(--text-mid); letter-spacing: 0.04em;
+  }
+
+  /* RESEARCH INTERESTS */
+  .interests-grid { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+  .interest-tag {
+    background: var(--teal-light);
+    border: 1px solid rgba(10,92,79,0.2);
+    border-radius: 4px; padding: 6px 14px;
+    font-size: 0.83rem; color: var(--teal-dark); font-weight: 400;
+  }
+
+  /* PUBLICATIONS */
+  .pub-list { display: flex; flex-direction: column; gap: 1.2rem; }
+  .pub-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--teal-mid);
+    border-radius: 6px;
+    padding: 1.25rem 1.4rem;
+  }
+  .pub-card.solo { border-left-color: var(--gold); }
+  .pub-meta {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin-bottom: 0.4rem; flex-wrap: wrap;
+  }
+  .pub-year {
+    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em;
+    color: var(--text-muted);
+  }
+  .pub-badge {
+    font-size: 0.68rem; padding: 2px 8px; border-radius: 3px;
+    font-weight: 500; letter-spacing: 0.04em;
+  }
+  .badge-scopus { background: #e0f2ef; color: #0a5c4f; }
+  .badge-solo   { background: #f7f0e3; color: #8a6220; }
+  .badge-q2     { background: #e8f3fb; color: #1a5f8a; }
+  .pub-title {
+    font-size: 0.95rem; font-weight: 500; color: var(--text-dark);
+    line-height: 1.4; margin-bottom: 0.35rem;
+  }
+  .pub-authors  { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem; }
+  .pub-journal  { font-size: 0.8rem; color: var(--teal-mid); font-style: italic; }
+  .pub-cites    { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+  .underreview-note {
+    background: var(--gold-light); border: 1px solid rgba(184,137,58,0.3);
+    border-radius: 6px; padding: 1rem 1.25rem; margin-top: 1rem;
+    font-size: 0.85rem; color: #6b4f1a;
+  }
+  .underreview-note strong { color: #8a6220; }
+
+  /* RESEARCH THEMES */
+  .themes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .theme-card {
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 1.25rem 1.4rem;
+  }
+  .theme-icon {
+    width: 36px; height: 36px; border-radius: 6px;
+    background: var(--teal-light);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+  .theme-icon svg { width: 18px; height: 18px; color: var(--teal); }
+  .theme-title { font-size: 0.9rem; font-weight: 500; color: var(--teal-dark); margin-bottom: 0.4rem; }
+  .theme-desc  { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+
+  /* METHODOLOGY */
+  .method-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1rem; }
+  .method-tag {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 4px; padding: 5px 12px; font-size: 0.78rem; color: var(--text-mid);
+  }
+
+  /* TEACHING */
+  .teaching-two { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .teach-group-title {
+    font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 0.75rem;
+  }
+  .teach-list { list-style: none; }
+  .teach-list li {
+    padding: 6px 0; border-bottom: 1px solid var(--border);
+    font-size: 0.85rem; color: var(--text-mid);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .teach-list li::before {
+    content: ''; width: 5px; height: 5px; border-radius: 50%;
+    background: var(--teal-mid); flex-shrink: 0;
+  }
+  .teach-list li:last-child { border-bottom: none; }
+
+  /* SERVICE */
+  .service-list { display: flex; flex-direction: column; gap: 0.8rem; }
+  .service-item {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 0.9rem 1rem; background: var(--white);
+    border: 1px solid var(--border); border-radius: 6px;
+  }
+  .service-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--gold);
+    margin-top: 6px; flex-shrink: 0;
+  }
+  .service-main { font-size: 0.88rem; font-weight: 500; color: var(--text-dark); }
+  .service-sub  { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* TIMELINE / EDUCATION */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-item {
+    display: grid; grid-template-columns: 130px 1fr;
+    gap: 1.5rem; padding: 1.2rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .tl-item:last-child { border-bottom: none; }
+  .tl-year { font-size: 0.8rem; color: var(--text-muted); padding-top: 3px; }
+  .tl-title { font-size: 0.92rem; font-weight: 500; color: var(--text-dark); }
+  .tl-sub   { font-size: 0.8rem; color: var(--text-muted); }
+
+  /* FUTURE TARGETS */
+  .targets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  .target-card {
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 1.25rem; text-align: center;
+  }
+  .target-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem; font-weight: 600; color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .target-label { font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; }
+
+  /* CONTACT FOOTER */
+  footer {
+    background: var(--teal-dark); color: #f0ebe2; padding: 3rem 2rem;
+  }
+  .footer-inner {
+    max-width: 900px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem;
+  }
+  .footer-head {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem; font-weight: 400; color: var(--gold);
+    letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.75rem;
+  }
+  .footer-link {
+    display: block; color: rgba(240,235,226,0.75); text-decoration: none;
+    font-size: 0.82rem; margin-bottom: 0.4rem; transition: color 0.2s;
+  }
+  .footer-link:hover { color: var(--gold); }
+  .footer-bottom {
+    max-width: 900px; margin: 2rem auto 0; padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.75rem; color: rgba(240,235,226,0.45);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+
+  @media (max-width: 700px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; }
+    .avatar { margin: 0 auto; }
+    .hero-ids, .hero-contacts { justify-content: center; }
+    .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .themes-grid, .teaching-two, .targets-grid, .footer-inner { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Dr. Reem Abdalla</div>
+  <ul class="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#service">Service</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="avatar">RA</div>
+    <div class="hero-text">
+      <div class="hero-role">Assistant Professor &amp; Program Head</div>
+      <h1>Dr. Reem Abbas<br><strong>Hidaytalla Abdalla</strong></h1>
+      <div class="hero-inst">Business Informatics (BSBI) · University of Technology Bahrain · Manama, Kingdom of Bahrain</div>
+      <div class="hero-ids">
+        <div class="id-chip">Scopus ID <span>59171925400</span></div>
+        <div class="id-chip">ORCID <span>0009-0004-2881-5372</span></div>
+        <div class="id-chip">WoS <span>PFR-7812-2026</span></div>
+        <div class="id-chip">IEEE Member</div>
+      </div>
+      <div class="hero-contacts">
+        <a href="mailto:R.Abdalla@utb.edu.bh" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          R.Abdalla@utb.edu.bh
+        </a>
+        <a href="https://scholar.google.com/citations?user=zfJpOHwAAAAJ" target="_blank" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://orcid.org/0009-0004-2881-5372" target="_blank" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M9 7v10M12 7c4 0 5 2 5 5s-1 5-5 5H9"/></svg>
+          ORCID Profile
+        </a>
+        <a href="tel:+97333992927" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.17 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7a2 2 0 011.72 2z"/></svg>
+          +973 3399 2927
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section id="metrics" style="background: var(--white); padding: 3rem 2rem;">
+  <div class="section-inner">
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-num">42</div>
+        <div class="metric-label">Total Citations</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">4</div>
+        <div class="metric-label">h-index</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">10+</div>
+        <div class="metric-label">Publications</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">6</div>
+        <div class="metric-label">Under Review (Q1/Q2)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH INTERESTS -->
+<section id="research">
+  <div class="section-inner">
+    <div class="section-label">Areas of Expertise</div>
+    <h2 class="section-title">Research Interests</h2>
+    <div class="interests-grid">
+      <span class="interest-tag">Total Quality Management</span>
+      <span class="interest-tag">Digital Transformation</span>
+      <span class="interest-tag">Financial Technology (FinTech)</span>
+      <span class="interest-tag">Digital Banking Adoption</span>
+      <span class="interest-tag">Knowledge Management &amp; Innovation</span>
+      <span class="interest-tag">Technology Acceptance Model (TAM)</span>
+      <span class="interest-tag">Theory of Planned Behaviour (TPB)</span>
+      <span class="interest-tag">AI &amp; Sustainable Development Goals</span>
+      <span class="interest-tag">Organisational Performance</span>
+      <span class="interest-tag">Green FinTech</span>
+      <span class="interest-tag">Islamic Banking &amp; Finance</span>
+      <span class="interest-tag">Emerging Economies &amp; GCC Context</span>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <div class="section-label">Core Themes</div>
+      <h2 class="section-title">Research Agenda</h2>
+      <div class="themes-grid">
+        <div class="theme-card">
+          <div class="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="theme-title">Digital Banking &amp; FinTech Adoption</div>
+          <div class="theme-desc">Behavioural and structural factors influencing adoption of digital banking and FinTech services using integrated C-TAM-TPB frameworks, with focus on Saudi Arabia, Bahrain, and GCC markets.</div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="theme-title">Knowledge Management &amp; Innovation</div>
+          <div class="theme-desc">Examining how knowledge creation, sharing, and management practices influence innovation performance and organisational effectiveness in higher education and service industries.</div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div class="theme-title">Digital Transformation &amp; Service Innovation</div>
+          <div class="theme-desc">Cloud computing adoption in SMEs, digital platform decision-making, and the role of digital transformation in enhancing customer experience and organisational agility.</div>
+        </div>
+        <div class="theme-card">
+          <div class="theme-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 002 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div class="theme-title">AI, Sustainability &amp; the UN SDGs</div>
+          <div class="theme-desc">Interdisciplinary work on the role of AI in advancing SDGs across healthcare, environmental management, and financial inclusion — engaging technical capabilities alongside social and ethical implications.</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <div class="teach-group-title" style="margin-bottom: 0.75rem;">Methodological Expertise</div>
+      <div class="method-grid">
+        <span class="method-tag">PLS-SEM (SmartPLS)</span>
+        <span class="method-tag">Structural Equation Modeling</span>
+        <span class="method-tag">Multi-Group Analysis (MGA)</span>
+        <span class="method-tag">HTMT Discriminant Validity</span>
+        <span class="method-tag">Second-Order Constructs</span>
+        <span class="method-tag">VIF Analysis</span>
+        <span class="method-tag">Q² Predictive Relevance</span>
+        <span class="method-tag">Quantitative Survey Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" style="background: var(--ivory);">
+  <div class="section-inner">
+    <div class="section-label">Scholarly Output</div>
+    <h2 class="section-title">Publications</h2>
+    <div class="pub-list">
+
+      <div class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-badge badge-scopus">Scopus</span>
+        </div>
+        <div class="pub-title">From Scroll to Sale: How Social Media Triggers and Age Shape Digital Consumer Decisions through Interaction</div>
+        <div class="pub-authors">Abdalla, R.A., Faisal, S., Menon, N., &amp; Mohammed, A.</div>
+        <div class="pub-journal">Frontiers in Communication, 10, 1664694</div>
+        <div class="pub-cites">Cited: 1</div>
+      </div>
+
+      <div class="pub-card solo">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-badge badge-scopus">Scopus</span>
+          <span class="pub-badge badge-solo">Solo Author</span>
+        </div>
+        <div class="pub-title">Modeling Digital Banking Adoption in Saudi Arabia: An Integrated C-TAM-TPB Framework Examining the Role of Perceived Security-Based Trust</div>
+        <div class="pub-authors">Abdalla, R.A.</div>
+        <div class="pub-journal">Scopus-Indexed Journal</div>
+        <div class="pub-cites">Cited: 1</div>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-year">2025</span>
+          <span class="pub-badge badge-scopus">Scopus</span>
+        </div>
+        <div class="pub-title">The Role of AI Technology in Advancing the United Nations SDGs in Healthcare and Environmental Services across Various Industries</div>
+        <div class="pub-authors">Abdalla, R.A., Hidaytalla, L.A., Mulla, G.S., Al-Salman, M., Hammad, M., &amp; Ahmed, E.</div>
+        <div class="pub-journal">Sustainable Data Management: Navigating Big Data, Communication Technology</div>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-badge badge-scopus">Scopus</span>
+          <span class="pub-badge badge-q2">Q2</span>
+        </div>
+        <div class="pub-title">Enhancing Efficiency: The Impact of Cloud Computing Adoption on SME Performance</div>
+        <div class="pub-authors">Abdalla, R.A., Ramayah, T., Sankar, J.P., Hidaytalla, L.A., &amp; John, J.A.</div>
+        <div class="pub-journal">Emerging Science Journal, 8(6), 2431–2448</div>
+        <div class="pub-cites">Cited: 12</div>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-badge badge-scopus">Scopus</span>
+        </div>
+        <div class="pub-title">Factors Influencing Hotel Decision-Making through Digital Platforms in South Asia</div>
+        <div class="pub-authors">Faizal, S., Sankar, J.P., Menon, N., Abdalla, R., &amp; Pattali, S.</div>
+        <div class="pub-journal">Cogent Social Sciences, 10(1), 2407933</div>
+        <div class="pub-cites">Cited: 5</div>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-badge badge-scopus">Scopus</span>
+        </div>
+        <div class="pub-title">The Contribution of Islamic Banking and Finance to the Sustainable Development Goals of 2030</div>
+        <div class="pub-authors">Abdalla, R.A., Alaaraj, H.K., &amp; Mulla, G.S.</div>
+        <div class="pub-journal">Sustainable Innovations in Management in the Digital Transformation Era (SIMDTE), pp. 249–261</div>
+        <div class="pub-cites">Cited: 9</div>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-year">2024</span>
+          <span class="pub-badge badge-scopus">Scopus</span>
+        </div>
+        <div class="pub-title">Economic Growth of India: The Role of Production, Trade, and CO2 Emission Based on Granger Causality</div>
+        <div class="pub-authors">John, J.A., Sankar, J.P., Abdalla, R.A., Chellakan, S.R., Misra, S., &amp; Mulla, G.</div>
+        <div class="pub-journal">Journal of Infrastructure, Policy and Development, 8(8), 4666</div>
+      </div>
+
+      <div class="pub-card">
+        <div class="pub-meta">
+          <span class="pub-year">2021</span>
+          <span class="pub-badge badge-scopus">Scopus</span>
+        </div>
+        <div class="pub-title">Knowledge Sharing and Innovation Performance: A Case Study of Aluminum Bahrain</div>
+        <div class="pub-authors">Almuslamania, H.A.I. &amp; Abdalla, R.A.H.</div>
+        <div class="pub-journal">Academic Journal (Scopus)</div>
+      </div>
+
+    </div>
+
+    <div class="underreview-note">
+      <strong>Pipeline — 6 Manuscripts Currently Under Review</strong><br>
+      2 submitted as First Author (at second review and first review stages) · 4 submitted as Sole Author. Topics span: digital banking adoption, FinTech, AI &amp; SDGs, knowledge management, social media and consumer behaviour, and sustainable CSR in Islamic finance — all targeting Q1/Q2 Scopus and Web of Science journals.
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching">
+  <div class="section-inner">
+    <div class="section-label">Education &amp; Pedagogy</div>
+    <h2 class="section-title">Teaching &amp; Academic Background</h2>
+
+    <p style="color: var(--text-mid); font-size: 0.9rem; max-width: 700px; margin-bottom: 2rem; line-height: 1.8;">
+      My teaching philosophy combines strong theoretical understanding with practical application and critical thinking. I create student-centered learning environments through active learning approaches — case studies, project-based learning, simulations, and real-world problem solving — integrated with digital tools and emerging technologies.
+    </p>
+
+    <div class="teaching-two">
+      <div>
+        <div class="teach-group-title">Courses Taught</div>
+        <ul class="teach-list">
+          <li>Strategic Management</li>
+          <li>Operations Management</li>
+          <li>Supply Chain Management</li>
+          <li>Principles of Management</li>
+          <li>International Management</li>
+          <li>Business Communication</li>
+          <li>Financial Risk Management</li>
+          <li>Mathematics of Investment</li>
+          <li>Islamic Banking &amp; Finance (I, II &amp; III)</li>
+          <li>Technology Innovation Management</li>
+          <li>Knowledge Management</li>
+          <li>Corporate Social Responsibility</li>
+          <li>Research &amp; Quantitative Methods</li>
+          <li>Fundamentals of Information Systems</li>
+        </ul>
+      </div>
+      <div>
+        <div class="teach-group-title">Education</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">2013 – 2017</div>
+            <div>
+              <div class="tl-title">Doctor of Philosophy — Total Quality Management</div>
+              <div class="tl-sub">Sudan University for Science and Technology, Sudan</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2007 – 2014</div>
+            <div>
+              <div class="tl-title">Master of Business Administration — Islamic Banking &amp; Finance</div>
+              <div class="tl-sub">Arab Open University, Bahrain</div>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">1992 – 1998</div>
+            <div>
+              <div class="tl-title">BSc — Computer Science with Statistics</div>
+              <div class="tl-sub">University of Khartoum, Sudan</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <div class="teach-group-title">Experiential Learning Initiatives</div>
+          <ul class="teach-list">
+            <li>TradeQuest Coach — 2nd place national presentation</li>
+            <li>INJAZ Program Coordinator — UTB Best University 2025</li>
+            <li>Entrepreneurship Development Program (EDP) — 7 cohorts</li>
+            <li>Hackathon Mentor — multiple top rankings</li>
+            <li>MBA Thesis Supervisor</li>
+            <li>Internship Coordinator</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE -->
+<section id="service" style="background: var(--white);">
+  <div class="section-inner">
+    <div class="section-label">Leadership &amp; Engagement</div>
+    <h2 class="section-title">Academic Service &amp; University Roles</h2>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div>
+        <div class="teach-group-title" style="margin-bottom: 0.75rem;">Institutional Leadership</div>
+        <div class="service-list">
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">Assistant Professor &amp; Program Head — BSBI</div>
+              <div class="service-sub">University of Technology Bahrain · 2021 – Present</div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">Research Champion</div>
+              <div class="service-sub">UTB Champion Role</div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">Enrollment Champion</div>
+              <div class="service-sub">UTB Champion Role</div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">VMV Champion</div>
+              <div class="service-sub">UTB Champion Role</div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">BQA Accreditation Coordinator</div>
+              <div class="service-sub">Standards 5–9 responsible member</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="teach-group-title" style="margin-bottom: 0.75rem;">Conference &amp; Editorial Service</div>
+        <div class="service-list">
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">Co-Chair — SIMDTE International Conference</div>
+              <div class="service-sub">2023 &amp; 2025 editions</div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">Peer Reviewer — Heliyon (Elsevier)</div>
+              <div class="service-sub">Cell Press / Elsevier</div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">Peer Reviewer — The Innovation (Cell Press)</div>
+              <div class="service-sub">Web of Science indexed</div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">Peer Reviewer — Journal of Patient Experience</div>
+            </div>
+          </div>
+          <div class="service-item">
+            <div class="service-dot"></div>
+            <div>
+              <div class="service-main">Internal Examiner &amp; Defense Chair</div>
+              <div class="service-sub">Postgraduate Research Defenses</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 2.5rem;">
+      <div class="teach-group-title" style="margin-bottom: 0.75rem;">Community Engagement</div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem;">
+        <div class="service-item" style="flex-direction: column; gap: 0.3rem;">
+          <div class="service-main" style="font-size: 0.82rem;">IEEE Member</div>
+          <div class="service-sub">Institute of Electrical &amp; Electronics Engineers</div>
+        </div>
+        <div class="service-item" style="flex-direction: column; gap: 0.3rem;">
+          <div class="service-main" style="font-size: 0.82rem;">Bahrain CSR Society</div>
+          <div class="service-sub">Committee Member</div>
+        </div>
+        <div class="service-item" style="flex-direction: column; gap: 0.3rem;">
+          <div class="service-main" style="font-size: 0.82rem;">Public Lectures</div>
+          <div class="service-sub">IlaBahrain, CSR events, PlusFM Radio</div>
+        </div>
+        <div class="service-item" style="flex-direction: column; gap: 0.3rem;">
+          <div class="service-main" style="font-size: 0.82rem;">Gold Volunteer — INJAZ</div>
+          <div class="service-sub">UTB Best University 2025</div>
+        </div>
+        <div class="service-item" style="flex-direction: column; gap: 0.3rem;">
+          <div class="service-main" style="font-size: 0.82rem;">TradeQuest Advisor</div>
+          <div class="service-sub">2024–25 &amp; 2025–26</div>
+        </div>
+        <div class="service-item" style="flex-direction: column; gap: 0.3rem;">
+          <div class="service-main" style="font-size: 0.82rem;">Alman School Consultant</div>
+          <div class="service-sub">Professional consultation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUTURE RESEARCH -->
+<section>
+  <div class="section-inner">
+    <div class="section-label">2025 – 2028</div>
+    <h2 class="section-title">Future Research Targets</h2>
+    <div class="targets-grid">
+      <div class="target-card">
+        <div class="target-num">3+</div>
+        <div class="target-label">Journal submissions per year as first or sole author (Q1/Q2 Scopus &amp; WoS)</div>
+      </div>
+      <div class="target-card">
+        <div class="target-num">2+</div>
+        <div class="target-label">High-impact published articles per year</div>
+      </div>
+      <div class="target-card">
+        <div class="target-num">2–3</div>
+        <div class="target-label">International academic conferences per year</div>
+      </div>
+    </div>
+    <div style="margin-top: 1.5rem; padding: 1.25rem 1.5rem; background: var(--teal-light); border-radius: 8px; border-left: 3px solid var(--teal-mid);">
+      <div class="teach-group-title" style="margin-bottom: 0.5rem;">Thematic Priorities</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <span class="interest-tag">Digital Banking &amp; FinTech — new markets &amp; regulatory contexts</span>
+        <span class="interest-tag">Knowledge Management — healthcare &amp; higher education</span>
+        <span class="interest-tag">AI &amp; the SDGs — interdisciplinary work</span>
+        <span class="interest-tag">Green FinTech — sustainable financial innovation</span>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.82rem; color: var(--text-mid);">
+        Active collaborative networks in Malaysia, India, UAE, Saudi Arabia, and Sudan. Research model designed for high output without significant external funding through structured surveys and supervised master's research conversion.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FOOTER -->
+<footer id="contact">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-head">Contact</div>
+      <a href="mailto:R.Abdalla@utb.edu.bh" class="footer-link">R.Abdalla@utb.edu.bh</a>
+      <a href="tel:+97333992927" class="footer-link">+973 3399 2927</a>
+      <a class="footer-link" style="cursor: default;">Manama, Kingdom of Bahrain</a>
+    </div>
+    <div>
+      <div class="footer-head">Academic Profiles</div>
+      <a href="https://scholar.google.com/citations?user=zfJpOHwAAAAJ" target="_blank" class="footer-link">Google Scholar</a>
+      <a href="https://orcid.org/0009-0004-2881-5372" target="_blank" class="footer-link">ORCID: 0009-0004-2881-5372</a>
+      <a class="footer-link" style="cursor: default;">Scopus ID: 59171925400</a>
+      <a class="footer-link" style="cursor: default;">Web of Science: PFR-7812-2026</a>
+    </div>
+    <div>
+      <div class="footer-head">Institution</div>
+      <a href="https://www.utb.edu.bh" target="_blank" class="footer-link">University of Technology Bahrain</a>
+      <a class="footer-link" style="cursor: default;">Program Head — Business Informatics (BSBI)</a>
+      <a class="footer-link" style="cursor: default;">IEEE Member</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Dr. Reem Abbas Hidaytalla Abdalla · Academic Profile</span>
+    <span>University of Technology Bahrain · 2025</span>
+  </div>
+</footer>
+
+</body>
+</html>
